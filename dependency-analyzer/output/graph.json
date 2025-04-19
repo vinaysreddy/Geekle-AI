@@ -1,0 +1,41 @@
+{
+  "graph/graphBuilder.js": [],
+  "llm/gemini.js": [
+    "node-fetch",
+    "dotenv"
+  ],
+  "llm/summarizer.js": [
+    "openai",
+    "dotenv"
+  ],
+  "parser/jsParser.js": [
+    "fs"
+  ],
+  "routes/analyzeRoute.js": [
+    "express",
+    "fs",
+    "path",
+    "../utils/fileScanner.js",
+    "../parser/jsParser.js",
+    "../graph/graphBuilder.js"
+  ],
+  "routes/geminiRoute.js": [
+    "express",
+    "../llm/gemini.js"
+  ],
+  "routes/summarizeRoute.js": [
+    "express",
+    "../llm/summarizer.js"
+  ],
+  "server.js": [
+    "express",
+    "./routes/analyzeRoute.js",
+    "./routes/geminiRoute.js",
+    "./routes/summarizeRoute.js",
+    "dotenv"
+  ],
+  "utils/fileScanner.js": [
+    "fs",
+    "path"
+  ]
+}
